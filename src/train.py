@@ -12,6 +12,7 @@ S3_BUCKET = "edu-avinash-mlproj-bkt1"
 S3_KEY = "latest/model.pkl"
 
 
+
 df = pd.read_csv("data/processed/clean.csv")
 X, y = df.review_text, df.sentiment
 
