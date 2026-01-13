@@ -93,6 +93,8 @@ https://hub.docker.com/repository/docker/avinashacharya26/loksai-mlops830api/gen
 
 #### kubectl outputs ####
 
+<img width="612" height="236" alt="Screenshot 2026-01-13 at 1 18 42 AM" src="https://github.com/user-attachments/assets/f5fb2fa3-2758-4b23-adb4-04750081996f" />
+
 root@kmaster-node:~/kubernetes/actions-runner# kubectl get pods
 NAME                                 READY   STATUS             RESTARTS      AGE
 loksai-api-deploy-7dcc7b7b7c-gzfqx   0/1     CrashLoopBackOff   6 (36s ago)   6m57s
