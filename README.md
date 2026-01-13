@@ -1,4 +1,4 @@
-# MLOPs_Training
+# MLOPs_Project
 
 A compact end-to-end MLOps example: data (DVC) → training → MLflow tracking & registry → Docker images → GitHub Actions CI/CD → Kubernetes deployment.
 
@@ -82,6 +82,13 @@ Or create a limited service-account and kubeconfig for least-privilege access (r
 ## Next steps & recommendations
 - Replace admin kubeconfig with a scoped service account kubeconfig for CI/CD deployments.
 - Add `requirements.txt` and small README sections per component (api, ui) if you want runnable examples for newcomers.
+
+
+
+### Docker Repo ##
+
+https://hub.docker.com/repository/docker/avinashacharya26/loksai-mlops830ui/general
+https://hub.docker.com/repository/docker/avinashacharya26/loksai-mlops830api/general
 
 
 #### kubectl outputs ####
