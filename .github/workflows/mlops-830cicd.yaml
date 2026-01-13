@@ -59,7 +59,13 @@ jobs:
     - name: Setup kubectl
       run: |
         mkdir -p ~/.kube
-        echo "${{ secrets.KUBECONFIG_DATA }}" | base64 --decode > ~/.kube/config
+        # Try base64 decode first; if it fails, treat secret as raw kubeconfig
+        if printf '%s' "${{ secrets.KUBECONFIG_DATA }}" | base64 --decode > ~/.kube/config 2>/dev/null; then
+          echo "Used base64-decoded kubeconfig"
+        else
+          printf '%s\n' "${{ secrets.KUBECONFIG_DATA }}" > ~/.kube/config
+          echo "Used raw kubeconfig secret"
+        fi
         chmod 600 ~/.kube/config
 
 
