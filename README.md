@@ -71,13 +71,6 @@ Or create a limited service-account and kubeconfig for least-privilege access (r
 - `kubectl` errors about invalid kubeconfig — ensure `KUBECONFIG_DATA` is correctly encoded or that `/home/<runner>/.kube/config` contains a valid kubeconfig YAML (not a raw base64 blob).
 - `sudo: password for <user>` failures — ensure the user is in the `sudo` group or use cloud provider recovery to edit sudoers if locked out.
 
-## Diagrams
-- See `diagrams/` for draw.io XML files you can import into diagrams.net (draw.io). Files:
-  - `mlops_architecture.xml`
-  - `dataflow_dvc_s3_mlflow.xml`
-  - `github_actions_flow.xml`
-  - `ui_api_k8s_mlflow_s3.xml`
-  - `fastapi_prometheus_grafana.xml`
 
 ## Next steps & recommendations
 - Replace admin kubeconfig with a scoped service account kubeconfig for CI/CD deployments.
